@@ -69,3 +69,22 @@ class Solution:
 	sign = [1,-1][x<0]
 	whole_string = sign * int(str(abs(x))[::-1])
 	return whole_string if -(2**31)-1 < rst < 2**31 else 0
+
+8.
+
+9.
+
+10.
+
+class Solution:
+    def maxArea(self, height: List[int]) -> int:
+    	left = 0
+	right = len(height) - 1
+	water_area = 0
+	while left < right:
+	    water_area = max(water_area, (right-left) * min(height[left],height[right]))
+	    if heightp[left] < height[right]:
+	    	left += 1
+	    else:
+	    	right -= 1
+	return water_area

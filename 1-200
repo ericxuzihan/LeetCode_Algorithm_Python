@@ -230,7 +230,36 @@ class Solution:
     	self.dfs(leftRemain-1, rightRemain, path+"(", res)
     	self.dfs(leftRemain, rightRemain-1, path+")", res)
 
+23.
 
+24.
+
+class Solution:
+    def swapPairs(self, head: ListNode) -> ListNode:
+        pre, pre.next = self, head
+        while pre.next and pre.next.next:
+            a = pre.next
+            b = a.next
+            pre.next = b
+            b.next = a 
+            a.next = b.next
+            pre = a
+        return self.next
+
+25.
+
+26.
+
+class Solution:  
+    def removeDuplicates(self, nums: List[int]) -> int:
+    	dict = {}
+	for i in nums:
+	    if i not in dict:
+	    	dict[i] = 1
+	    else:
+	    	dict[i] += 1     ########creat the counter with dictionary
+	
+	
 		
 
 	    	

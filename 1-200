@@ -232,6 +232,21 @@ class Solution:
 
 23.
 
+class Solution:
+    def mergeKLists(self, lists: List[ListNode]) -> ListNode:
+    	ls = []
+	for i in lists:
+	    while i:
+	    	ls.append(i.val)
+		i = i.next
+	ls.sort()
+	head = dummy = ListNode(0)
+	for j in ls:
+	    head.next = ListNode(j)
+	    head = head.next
+	 return dummy.next
+	
+
 24.
 
 class Solution:

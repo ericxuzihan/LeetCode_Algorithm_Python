@@ -389,8 +389,32 @@ class Solution:
 		right -= 1
 	return water
 
+43.
 
+class Solution:
+    def multiply(self, num1: str, num2: str) -> str:
+        integer1 = int(num1)
+        integer2 = int(num2)
+        result = integer1 * integer2
+        return str(result)
+        
+44.
 
+45.
+
+class Solution:
+    def jump(self, nums: List[int]) -> int:
+    	if len(nums) <= 1:
+	    return 0
+	l = 0
+	r = nums[0]
+	times = 1
+	if r < len(nums) - 1:
+	    times += 1
+	    nxt = max(i + nums[i] for i in range(1,r+1))
+	    l = r
+	    r = nxt
+	return times
 	    	
 
 
